@@ -1,0 +1,23 @@
+#!/bin/bash
+
+mvn spring-boot:run -Dspring-boot.run.fork=false -Dspring.profiles.active=dev \
+  -Dstart-class=audiogen.main.GeneratePaperAudio -Dspring-boot.run.arguments="-n=5 -c=cs.AI"
+
+mvn spring-boot:run -Dspring-boot.run.fork=false -Dspring.profiles.active=dev \
+  -Dstart-class=audiogen.main.GeneratePaperAudio -Dspring-boot.run.arguments="-n=5 -c=cs.AR"
+
+mvn spring-boot:run -Dspring-boot.run.fork=false -Dspring.profiles.active=dev \
+  -Dstart-class=audiogen.main.GeneratePaperAudio -Dspring-boot.run.arguments="-n=5 -c=cs.DB"
+
+mvn spring-boot:run -Dspring-boot.run.fork=false -Dspring.profiles.active=dev \
+  -Dstart-class=audiogen.main.GeneratePaperAudio -Dspring-boot.run.arguments="-n=5 -c=cs.DC"
+
+mvn spring-boot:run -Dspring-boot.run.fork=false -Dspring.profiles.active=dev \
+  -Dstart-class=audiogen.main.GeneratePaperAudio -Dspring-boot.run.arguments="-n=5 -c=cs.NI"
+
+mvn spring-boot:run -Dspring-boot.run.fork=false -Dspring.profiles.active=dev \
+  -Dstart-class=audiogen.main.GeneratePaperAudio -Dspring-boot.run.arguments="-n=5 -c=cs.OS"
+
+mvn spring-boot:run -Dspring-boot.run.fork=false -Dspring.profiles.active=dev \
+  -Dstart-class=audiogen.main.GeneratePaperAudio -Dspring-boot.run.arguments="-n=5 -c=cs.PL"
+

@@ -1,0 +1,50 @@
+timeout: 1800s
+
+steps:
+  # Access the id_github file from Secret Manager, and setup SSH
+  - name: 'gcr.io/cloud-builders/git'
+    secretEnv: ['AUDIOGEN_REPO_READ_KEY']
+    entrypoint: 'bash'
+    args:
+      - -c
+      - |
+        echo "$$AUDIOGEN_REPO_READ_KEY" >> /root/.ssh/id_rsa
+        chmod 400 /root/.ssh/id_rsa
+        cp known_hosts.github /root/.ssh/known_hosts
+    volumes:
+      - name: 'ssh'
+        path: /root/.ssh
+
+  # Clone the repository
+  - name: 'gcr.io/cloud-builders/git'
+    args:
+      - clone
+      - --recurse-submodules
+      - git@github.com:pramodbiligiri/paper-audio
+    volumes:
+      - name: 'ssh'
+        path: /root/.ssh
+
+  # Build the project
+  - name: 'maven:3.6.3-jdk-11'
+    secretEnv: ['JFROG_ACCESS_TOKEN']
+    entrypoint: 'bash'
+    args:
+      - -c
+      - |
+        JFROG_USERNAME=pramodbiligiri@gmail.com JFROG_PASSWORD="$$JFROG_ACCESS_TOKEN" mvn -DskipTests -s .github/workflows/maven-settings.xml package
+
+  # use the Dockerfile to create a container image
+  - name: gcr.io/cloud-builders/docker
+    args: ["build", "-t", "gcr.io/$PROJECT_ID/paper-audio", "--build-arg=JAR_FILE=target/paper-audio-1.0-SNAPSHOT.jar", "."]
+
+  # push the container image to the Registry
+  - name: gcr.io/cloud-builders/docker
+    args: ["push", "gcr.io/$PROJECT_ID/paper-audio"]
+
+availableSecrets:
+  secretManager:
+    - versionName: projects/majestic-hybrid-308506/secrets/JFROG_ACCESS_TOKEN/versions/latest
+      env: 'JFROG_ACCESS_TOKEN'
+    - versionName: projects/majestic-hybrid-308506/secrets/gh-for-cloud-build-2/versions/latest
+      env: 'AUDIOGEN_REPO_READ_KEY'

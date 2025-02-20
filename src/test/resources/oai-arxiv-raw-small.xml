@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<OAI-PMH xmlns="http://www.openarchives.org/OAI/2.0/"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://www.openarchives.org/OAI/2.0/ http://www.openarchives.org/OAI/2.0/OAI-PMH.xsd">
+    <responseDate>2021-05-19T07:18:15Z</responseDate>
+    <request verb="ListRecords" from="2021-05-18" metadataPrefix="arXivRaw" set="cs">http://export.arxiv.org/oai2</request>
+
+    <ListRecords>
+        <record>
+            <header>
+                <identifier>oai:arXiv.org:1411.0628</identifier>
+                <datestamp>2021-05-19</datestamp>
+                <setSpec>cs</setSpec>
+            </header>
+            <metadata>
+                <arXivRaw xmlns="http://arxiv.org/OAI/arXivRaw/"
+                          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                          xsi:schemaLocation="http://arxiv.org/OAI/arXivRaw/ http://arxiv.org/OAI/arXivRaw.xsd">
+                    <id>1411.0628</id>
+                    <submitter>Valerii Sopin</submitter>
+                    <version version="v1">
+                        <date>Mon, 3 Nov 2014 19:41:08 GMT</date>
+                        <size>4kb</size>
+                    </version>
+                    <!-- Deleting a bunch of versions to keep this sample file small -->
+                    <version version="v9">
+                        <date>Fri, 8 May 2015 15:58:54 GMT</date>
+                        <size>0kb</size>
+                        <source_type>I</source_type>
+                    </version>
+
+                    <title>PH = PSPACE</title>
+                    <authors>Valerii Sopin</authors>
+                    <categories>cs.CC cs.DS</categories>
+                    <comments>The author greatly appreciate suggestions and help of Professor Lew
+                    Gordeew. The Computability in Europe conference (CiE), 5-9 July 2021</comments>
+                    <msc-class>03G05, 03B70, 68Q12, 68Q15, 68Q25</msc-class>
+                    <acm-class>F.2; F.4; G.2; J.2</acm-class>
+                    <license>http://arxiv.org/licenses/nonexclusive-distrib/1.0/</license>
+                    <abstract>  In this paper we show that PSPACE is equal to 4th level in the polynomial
+                    hierarchy. We also deduce a lot of important consequences.
+                    </abstract>
+                </arXivRaw>
+            </metadata>
+        </record>
+        <record>
+            <header>
+                <identifier>oai:arXiv.org:1501.05683</identifier>
+                <datestamp>2021-05-18</datestamp>
+                <setSpec>cs</setSpec>
+            </header>
+            <metadata>
+                <arXivRaw xmlns="http://arxiv.org/OAI/arXivRaw/"
+                          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                          xsi:schemaLocation="http://arxiv.org/OAI/arXivRaw/ http://arxiv.org/OAI/arXivRaw.xsd">
+                    <id>1501.05683</id>
+                    <submitter>Ling Liu</submitter>
+                    <version version="v1">
+                        <date>Thu, 22 Jan 2015 22:57:45 GMT</date>
+                        <size>131kb</size>
+                    </version>
+                    <!-- Deleting a bunch of versions to keep this sample file small -->
+                    <title>Polar Lattices for Lossy
+                        Compression</title>
+                    <authors>Ling Liu and Jinwen Shi and
+                        Cong Ling</authors>
+                    <categories>cs.IT math.IT</categories>
+                    <comments>63 pages, 18 figure</comments>
+                    <license>http://creativecommons.org/licenses/by-nc-sa/4.0/</license>
+                    <abstract>  Polar lattices, which are constructed from polar codes, have recently been
+                    proved to be able to achieve the capacity of the additive white Gaussian noise
+                    (AWGN) channel. In this work, we propose a new construction of polar lattices
+                    to solve the dual problem, i.e., achieving the rate-distortion bound of a
+                    memoryless Gaussian source, which means that polar lattices can also be good
+                    for the lossy compression of continuous sources. The structure of the proposed
+                    polar lattices enables us to integrate the post-entropy coding process into the
+                    lattice quantizer, which simplifies the quantization process. The overall
+                    complexity of encoding and decoding complexity is $O(N \log^2 N)$ for a
+                    sub-exponentially decaying excess distortion. Moreover, the nesting structure
+                    of polar lattices further provides solutions for some multi-terminal coding
+                    problems. The Wyner-Ziv coding problem for a Gaussian source can be solved by
+                    an AWGN capacity-achieving polar lattice nested in a rate-distortion bound
+                    achieving one, and the Gelfand-Pinsker problem can be solved in a reversed
+                    manner.
+                    </abstract>
+                </arXivRaw>
+            </metadata>
+        </record>
+        <resumptionToken cursor="0" completeListSize="1229">5370528|1001</resumptionToken>
+    </ListRecords>
+</OAI-PMH>
