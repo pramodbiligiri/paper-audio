@@ -14,7 +14,7 @@ $ mvn spring-boot:run -Dspring.profiles.active=dev -Dstart-class=audiogen.main.G
 ```
 
 There is a helper program `DumpAudioBytes`, which creates MP3 files from the generated audio. This can be used to
-manually verify the results
+manually verify the results  
 $ mvn spring-boot:run -Dspring.profiles.active=dev -Dstart-class=audiogen.main.DumpAudioBytes  
 
 ### Architecture
