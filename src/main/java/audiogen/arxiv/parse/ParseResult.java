@@ -1,5 +1,9 @@
 package audiogen.arxiv.parse;
 
+import com.fasterxml.jackson.annotation.JsonCreator;
+import com.fasterxml.jackson.annotation.JsonIgnore;
+import com.fasterxml.jackson.annotation.JsonProperty;
+
 import java.util.Objects;
 
 public class ParseResult {
@@ -7,7 +11,9 @@ public class ParseResult {
     private int recordCount;
     private int skipped;
 
-    public ParseResult(int recordCount, int skipped) {
+    @JsonCreator
+    public ParseResult(@JsonProperty("recordCount") int recordCount,
+                       @JsonProperty("skipped") int skipped) {
         this.recordCount = recordCount;
         this.skipped = skipped;
     }
@@ -25,12 +31,21 @@ public class ParseResult {
         return recordCount;
     }
 
-    public int getProcessed() {
-        return recordCount - skipped;
-    }
-
     public int getSkipped() {
         return skipped;
+    }
+
+    public void setRecordCount(int recordCount) {
+        this.recordCount = recordCount;
+    }
+
+    public void setSkipped(int skipped) {
+        this.skipped = skipped;
+    }
+
+    @JsonIgnore
+    public int getProcessed() {
+        return recordCount - skipped;
     }
 
     public boolean hasNoNewPapers() {
