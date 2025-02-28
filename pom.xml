@@ -21,14 +21,13 @@
         <maven.compiler.source>11</maven.compiler.source>
         <maven.compiler.target>11</maven.compiler.target>
 
-        <spring-cloud.version>2020.0.2</spring-cloud.version>
+        <spring-cloud.version>2024.0.0</spring-cloud.version>
         <spring-cloud-gcp.version>2.0.0</spring-cloud-gcp.version>
         <spring.cloud.gcp.postgres.version>1.2.7.RELEASE</spring.cloud.gcp.postgres.version>
         <spring-cloud-gcp-starter-storage.version>1.2.8.RELEASE</spring-cloud-gcp-starter-storage.version>
     </properties>
 
     <dependencies>
-
         <dependency>
             <groupId>io.bitken.tts</groupId>
             <artifactId>paper-model</artifactId>
@@ -78,6 +77,7 @@
         <dependency>
             <groupId>com.h2database</groupId>
             <artifactId>h2</artifactId>
+            <scope>test</scope>
         </dependency>
 
         <dependency>
@@ -90,11 +90,11 @@
             <artifactId>spring-boot-starter-jdbc</artifactId>
         </dependency>
 
-        <dependency>
-            <groupId>org.springframework.cloud</groupId>
-            <artifactId>spring-cloud-gcp-starter-sql-postgresql</artifactId>
-            <version>${spring.cloud.gcp.postgres.version}</version>
-        </dependency>
+<!--        <dependency>-->
+<!--            <groupId>org.springframework.cloud</groupId>-->
+<!--            <artifactId>spring-cloud-gcp-starter-sql-postgresql</artifactId>-->
+<!--            <version>${spring.cloud.gcp.postgres.version}</version>-->
+<!--        </dependency>-->
 
         <dependency>
             <groupId>org.postgresql</groupId>
@@ -102,11 +102,26 @@
             <version>42.2.19</version>
         </dependency>
 
+<!--        <dependency>-->
+<!--            <groupId>org.springframework.cloud</groupId>-->
+<!--            <artifactId>spring-cloud-gcp-starter-storage</artifactId>-->
+<!--            <version>${spring-cloud-gcp-starter-storage.version}</version>-->
+<!--        </dependency>-->
+
         <dependency>
             <groupId>org.springframework.cloud</groupId>
-            <artifactId>spring-cloud-gcp-starter-storage</artifactId>
-            <version>${spring-cloud-gcp-starter-storage.version}</version>
+            <artifactId>spring-cloud-starter-bootstrap</artifactId>
         </dependency>
+
+        <dependency>
+            <groupId>org.springframework.cloud</groupId>
+            <artifactId>spring-cloud-starter-config</artifactId>
+        </dependency>
+
+<!--        <dependency>-->
+<!--            <groupId>org.springframework.cloud</groupId>-->
+<!--            <artifactId>spring-cloud-config-server</artifactId>-->
+<!--        </dependency>-->
 
         <dependency>
             <groupId>com.google.cloud</groupId>
@@ -125,12 +140,18 @@
             <version>5.0.4</version>
         </dependency>
 
-        <!-- === START: Postgres docker container deps :START === -->
-        <!-- NOTE: This dep is needed for playtika containers to work! -->
+        <!-- https://mvnrepository.com/artifact/io.temporal/temporal-sdk -->
         <dependency>
-            <groupId>org.springframework.cloud</groupId>
-            <artifactId>spring-cloud-starter-bootstrap</artifactId>
-            <scope>test</scope>
+            <groupId>io.temporal</groupId>
+            <artifactId>temporal-sdk</artifactId>
+            <version>1.27.1</version>
+        </dependency>
+
+        <!-- https://mvnrepository.com/artifact/io.temporal/temporal-spring-boot-starter -->
+        <dependency>
+            <groupId>io.temporal</groupId>
+            <artifactId>temporal-spring-boot-starter</artifactId>
+            <version>1.27.1</version>
         </dependency>
 
         <dependency>

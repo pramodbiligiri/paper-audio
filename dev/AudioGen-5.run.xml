@@ -12,7 +12,7 @@
             <list>
               <option value="spring-boot:run" />
               <option value="-Dspring-boot.run.fork=false" />
-              <option value="-Dspring.profiles.active=dev" />
+              <option value="-Dspring-boot.run.profiles=dev,native" />
               <option value="-Dstart-class=audiogen.main.GeneratePaperAudio" />
               <option value="-Dspring-boot.run.arguments=5" />
             </list>
