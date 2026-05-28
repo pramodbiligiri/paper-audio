@@ -11,9 +11,9 @@
         <task>
             <id>1</id>
             <risk>low</risk>
-            <status>pending</status>
+            <status>agent-coded</status>
             <name>Domain layer — move pure logic to audiogen.domain</name>
-            <commit></commit>
+            <commit>a38580342108636bc32dc222622a270f41259001</commit>
             <created-from>plan-1-v1</created-from>
             <closed-at-version></closed-at-version>
             <comments/>
