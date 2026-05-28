@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<plan-tasks>
+    <plan>1</plan>
+    <plan-version>plan-1-v1</plan-version>
+    <metadata>
+        <backlog-issue></backlog-issue>
+        <status>active</status>
+        <created>2026-05-28</created>
+    </metadata>
+    <tasks>
+        <task>
+            <id>1</id>
+            <risk>low</risk>
+            <status>pending</status>
+            <name>Domain layer — move pure logic to audiogen.domain</name>
+            <commit></commit>
+            <created-from>plan-1-v1</created-from>
+            <closed-at-version></closed-at-version>
+            <comments/>
+            <deviations/>
+        </task>
+        <task>
+            <id>2</id>
+            <risk>medium</risk>
+            <status>pending</status>
+            <name>Define port interfaces and use-case skeletons</name>
+            <commit></commit>
+            <created-from>plan-1-v1</created-from>
+            <closed-at-version></closed-at-version>
+            <comments/>
+            <deviations/>
+        </task>
+        <task>
+            <id>3</id>
+            <risk>high</risk>
+            <status>pending</status>
+            <name>Implement adapter layer</name>
+            <commit></commit>
+            <created-from>plan-1-v1</created-from>
+            <closed-at-version></closed-at-version>
+            <comments/>
+            <deviations/>
+            <depends-on>2</depends-on>
+        </task>
+        <task>
+            <id>4</id>
+            <risk>high</risk>
+            <status>pending</status>
+            <name>Wire use cases with full logic</name>
+            <commit></commit>
+            <created-from>plan-1-v1</created-from>
+            <closed-at-version></closed-at-version>
+            <comments/>
+            <deviations/>
+            <depends-on>3</depends-on>
+        </task>
+        <task>
+            <id>5</id>
+            <risk>medium</risk>
+            <status>pending</status>
+            <name>Refactor CLI layer and Spring wiring</name>
+            <commit></commit>
+            <created-from>plan-1-v1</created-from>
+            <closed-at-version></closed-at-version>
+            <comments/>
+            <deviations/>
+            <depends-on>4</depends-on>
+        </task>
+        <task>
+            <id>6</id>
+            <risk>low</risk>
+            <status>pending</status>
+            <name>ArchUnit enforcement tests</name>
+            <commit></commit>
+            <created-from>plan-1-v1</created-from>
+            <closed-at-version></closed-at-version>
+            <comments/>
+            <deviations/>
+            <depends-on>5</depends-on>
+        </task>
+    </tasks>
+    <project-updates>
+        <update>
+            <timestamp>2026-05-28T16:38:28.680+05:30</timestamp>
+            <message>Plan initialised.</message>
+            <blocked>false</blocked>
+        </update>
+    </project-updates>
+</plan-tasks>
