@@ -1,4 +1,4 @@
-package audiogen.tts;
+package audiogen.domain;
 
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.BeforeEach;

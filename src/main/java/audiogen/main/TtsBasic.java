@@ -1,6 +1,6 @@
 package audiogen.main;
 
-import audiogen.tts.InputCleaner;
+import audiogen.domain.InputCleaner;
 import audiogen.tts.TextToSpeech;
 import audiogen.tts.TtsResult;
 import io.bitken.tts.model.entity.converter.IAudioFile;

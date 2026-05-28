@@ -1,4 +1,4 @@
-package audiogen.tts;
+package audiogen.domain;
 
 import io.bitken.tts.model.entity.PaperData;
 

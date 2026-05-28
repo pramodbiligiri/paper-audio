@@ -1,5 +1,6 @@
 package audiogen.tts;
 
+import audiogen.domain.PaperToTtsInput;
 import io.bitken.tts.model.entity.PaperAudio;
 import io.bitken.tts.model.entity.PaperData;
 import io.bitken.tts.model.entity.PaperTtsTask;
